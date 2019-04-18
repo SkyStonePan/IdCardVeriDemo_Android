@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/fl_surface"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextureView
+                android:id="@+id/texture_view_preview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.arcsoft.idcardveridemo.draw.FaceRectView
+                android:id="@+id/face_rect_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/logo2"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="62dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="62dp"
+            android:text="@string/btn_input_idcard"
+            android:onClick="onClickIdCard"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_compare"
+            android:layout_width="446dp"
+            android:layout_height="392dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="23dp"
+            android:background="@mipmap/compare_bg">
+
+            <ImageView
+                android:id="@+id/iv_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@mipmap/put_idcard"/>
+
+            <LinearLayout
+                android:id="@+id/ll_compare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_compare_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:background="@mipmap/compare_fail"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="161px"
+                        android:layout_height="202px"
+                        android:layout_centerHorizontal="true"
+                        android:background="@mipmap/idcard_bg">
+
+                        <ImageView
+                            android:id="@+id/iv_idcard"
+                            android:layout_width="102px"
+                            android:layout_height="126px"
+                            android:layout_marginTop="16px"
+                            android:layout_marginLeft="29px"
+                            android:layout_marginRight="29px"
+                            android:scaleType="fitXY"/>
+
+                    </FrameLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_compare_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="@string/tip_retry"
+                    android:textSize="48dp"
+                    android:textColor="#ffffff"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+
+</LinearLayout>

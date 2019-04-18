@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">IdCardVeriDemo</string>
+    <string name="tip_active_fail">人证引擎激活失败，错误码:%1$1d</string>
+    <string name="tip_init_fail">人证引擎初始化失败，错误码:%1$1d</string>
+    <string name="tip_retry">请重试</string>
+    <string name="tip_dialog_loading">正在处理，请稍后……</string>
+    <string name="tip_permission_deny">请同意相关权限，否则无法正常使用</string>
+    <string name="tip_connecting">正在连接</string>
+    <string name="tip_connect_success">连接成功</string>
+    <string name="tip_connect_fail">连接失败:%1$1d</string>
+    <string name="tip_connect_fail_read">读卡器连接失败:%1$1d</string>
+    <string name="btn_input_idcard">模拟身份证输入</string>
+</resources>
